@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mydb
-        image: nginx
+        image: nginx:1.27
         resources:
           limits:
             memory: "128Mi"
