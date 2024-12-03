@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: myjan
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      lables: myjan
+  template:
+    metadata:
+      labels:
+        name: myjan
+    containers:
+      - name: myapp
+        image: httpd
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "200m"
+          limits:
+            memory: "250Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 80
