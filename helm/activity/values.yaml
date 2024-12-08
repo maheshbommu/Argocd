@@ -1,5 +1,5 @@
 ---
-namespace: dev
+namespace: argocd
 replicas: 3
 image:
   name: "nginx"
